@@ -1,0 +1,212 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    background: #f9f5f0 url('https://i.pinimg.com/736x/b0/0f/64/b00f64623f01e968fdc77704c9e27066.jpg') no-repeat center center;
+    background-size: auto; /* Сохраняем оригинальный размер */
+    background-attachment: fixed;
+    position: relative;
+}
+/* Затемнение только под контентом */
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.names-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px; /* Уменьшили отступ между именами и текстовым блоком */
+}
+
+.name {
+    font-size: 6rem;
+    margin: 0px;
+    color: #5d4037;
+    font-family: Majestic;
+    font-weight: 100;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.and {
+    font-size: 4rem;
+    margin: 0;
+    color: #8d6e63;
+    font-family: 'Passions Conflict RUS', cursive;
+    font-weight: 400;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.name, .and {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-block {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    font-family: 'Times New Roman', cursive;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 50px; /* Уменьшили отступ сверху для текстового блока */
+}
+      /* Стили для заголовка h1 */
+    .text-block h1 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        color: #8b4513; /* коричневый цвет */
+        margin-bottom: 1.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .text-block h2 {
+        font-size: 2.0rem;
+        font-family: 'Times New Roman';
+        font-style: italic;
+        color: #8b4513; /* коричневый цвет */
+        margin-bottom: 2.5rem;
+        letter-spacing: 2px;
+        margin: 5rem 0; /* Большие отступы сверху и снизу */
+    }
+    /* Стили для текста после заголовка */
+    .text-block p {
+        font-size: 1.4rem;
+        margin-bottom: 3rem; /* Увеличенный отступ снизу */
+        color: #000000;
+        font-weight: 700; /* эквивалент bold (обычно 400 - normal, 700 - bold) */
+        line-height: 1.8;
+        padding: 0 1rem; /* Боковые отступы */
+    }
+
+    .text-block .poem { /* Заменил p1 на класс poem */
+        font-size: 1.4rem;
+        margin: 3rem 0; /* Большие отступы сверху и снизу */
+        color: rgba(85, 85, 85, 0.85);
+        line-height: 1.; /* Увеличенный межстрочный интервал */
+        font-style: italic;
+        padding: 0rem 1rem; /* Внутренние отступы */
+        border-top: 1px solid rgba(139, 69, 19, 0.2); /* Декоративная линия сверху */
+        border-bottom: 1px solid rgba(139, 69, 19, 0.2); /* Декоративная линия снизу */
+        background-color: rgba(249, 245, 240, 0.5); /* Легкий фоновый оттенок */
+    }
+    .text-block .dresscode {
+        margin: 4rem 0 2rem 0;
+        text-align: center;
+    }
+
+    .text-block .dresscode-title {
+        font-size: 1.8rem;
+        color: #8b4513;
+        margin-bottom: 2rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .text-block .dresscode-description {
+        font-size: 1.4rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+    
+    /* Стили для изображений цветов */
+    .color-examples {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+.color-example {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .color-example:hover {
+        transform: scale(1.05);
+    }
+
+/* Адаптивная версия */
+@media (max-width: 600px) {
+    .text-block .dresscode-title {
+        font-size: 1.5rem;
+    }
+
+    .text-block .dresscode-description {
+        font-size: 1.2rem;
+    }
+
+    .color-examples {
+        gap: 1rem;
+    }
+
+    .color-example {
+        width: 100px;
+        height: 100px;
+    }
+}
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .text-block h1 {
+        font-size: 2rem;
+    }
+
+    .text-block p {
+        font-size: 1rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .and {
+        font-size: 1.5rem;
+    }
+}
+@font-face {
+    font-family: 'MyFont';
+    src: url('font.woff2') format('woff2'), url('font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
